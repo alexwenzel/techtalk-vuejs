@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>beispiel 1</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        .box {
+            padding: 10px;
+            border: 1px solid;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
-$END$
+    <div id="app">
+        <input type="text" v-model="searchString" placeholder="suchwort">
+        <hr>
+        <template v-for="item in getItems()">
+            <div class="box">
+                {{ item }}
+            </div>
+        </template>
+    </div>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                searchString: '',
+                items: [
+                    'item 1', 'hans 3', 'item 4', 'wurst 5', 'item 6',
+                    'item 11', 'hans 33', 'item 44', 'wurst 5', 'item 6',
+                ]
+            },
+            methods: {
+                getItems: function () {
+                    return this.items.filter(item => {
+                        return item.indexOf(this.searchString) > -1
+                    })
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>
