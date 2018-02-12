@@ -1,0 +1,21 @@
+{
+  "name": "tech-talk-vuejs",
+  "authors": [
+    "alexwenzel <alexander.wenzel.berlin@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.5.13",
+    "axios": "^0.17.1"
+  }
+}

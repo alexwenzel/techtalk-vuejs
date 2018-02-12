@@ -1,0 +1,12 @@
+{
+    "name": "alexwenzel/silex",
+    "authors": [
+        {
+            "name": "alexwenzel",
+            "email": "alexander.wenzel.berlin@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0"
+    }
+}
